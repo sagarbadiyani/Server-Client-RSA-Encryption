@@ -1,14 +1,16 @@
-#Compilation
+# This is a vanilla implementation of server-client RSA encryption service where the communication happens between two clients.
+
+## Compilation
 - Server (Same command for both Mac and Ubuntu): `gcc -o server server.c`
 - Client (Mac): `gcc client.c -o client -lssl -lcrypto -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/`
 - Client (Ubuntu): `gcc client.c -o client -lssl -lcrypto`
 
-#Run
+## Run
 - Server: `./server 8080`
 - Client1: `./client private1.pem public2.pem 127.0.0.1 8080`
 - Client2: `./client private2.pem public1.pem 127.0.0.1 8080`
 
-#Sample Run
+## Sample Run
 - As soon as you connect both the clients to the server, the server will display the message that both the clients have connected.
 - In client 1 terminal, enter "Hello, Client 1 here".
 - You will see its cipher and its decrypted text in terminal 2.
